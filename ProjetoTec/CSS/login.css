@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 50%;
+}
+
+.login-box {
+    background-color:   #4e4f50;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bbb;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    color: #bbb;
+    margin-left: -30px;
+    font-size: 15px;
+}
+
+.forgot-password {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    background-color: #a4a0a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.signup-button {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: #888;
+    color: white;
+}
+
+.buttons .login-button {
+    margin-right: auto;
+}
+
+.custom-checkbox {
+    position: relative;
+    top: -2px; 
+}

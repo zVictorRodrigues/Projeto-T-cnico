@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Técnico</title>
+    <link rel="stylesheet" href="/CSS/PagPrincipal.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Projetos</h2>
+        </div>
+        <div class="project-list">
+            <ul>
+                <li data-project="todos" class="active" onclick="filterTasks('todos')">Todos os Projetos</li>
+                <li data-project="redes" onclick="filterTasks('redes')">Redes de computadores</li>
+                <li data-project="empreendedorismo" onclick="filterTasks('empreendedorismo')">Empreendedorismo</li>
+                <li data-project="cliente" onclick="filterTasks('cliente')">Prog. Cliente em Sis.</li>
+                <li data-project="servidor" onclick="filterTasks('servidor')">Prog. Servidor em Sis.</li>
+                <li data-project="tecnico" onclick="filterTasks('tecnico')">Projeto técnico</li>
+                <li data-project="topicos" onclick="filterTasks('topicos')">Tópicos especiais</li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="main-content">
+        <br>
+        <div class="board-header">
+            <input type="text" placeholder="Pesquisar no quadro" id="search-input">
+            <div class="board-filters">
+                <span class="filter blue"></span>
+                <span class="filter pink"></span>
+                <span class="filter green"></span>
+                <span class="filter purple"></span>
+                <span class="user-icon"></span>
+            </div>
+        </div>
+
+        <div id="profile-icon-container" class="profile-icon-container">
+            <a href="/HTML/Perfil.html  ">
+                <img src="/IMG/perfil-de-usuario.png" alt="Ícone de Perfil">
+            </a>
+        </div>
+    
+        <br>
+        <br>
+        <div class="board">
+            <div class="column">
+                <h2>Tarefas pendentes</h2>
+                <div class="task-card" id="task1" data-project="cliente" onclick="openModal(this)">Projeto Cliente web</div>
+                <div class="task-card red" id="task2" data-project="topicos" onclick="openModal(this)">Prova tópicos</div>
+                <div class="task-card grey" id="task3" data-project="tecnico" onclick="openModal(this)">Atividade EAD</div>
+                <button class="add-task">+ Criar</button>
+            </div>
+            <div class="column">
+                <h2>Em andamento</h2>
+                <div class="task-card blue" id="task4" data-project="servidor" onclick="openModal(this)">Projeto Servidor web</div>
+            </div>
+            <div class="column">
+                <h2>Acompanhamento</h2>
+                <div class="task-card red" id="task5" data-project="tecnico" onclick="openModal(this)">Protótipo</div>
+                <div class="task-card blue" id="task6" data-project="tecnico" onclick="openModal(this)">Prova redes</div>
+            </div>
+            <div class="column">
+                <h2>Concluído</h2>
+                <div class="task-card blue" id="task7" data-project="redes" onclick="openModal(this)">Servidor SSH</div>
+                <div class="task-card grey" id="task8" data-project="redes" onclick="openModal(this)">Baixar Ubuntu</div>
+                <div class="task-card purple" id="task9" data-project="empreendedorismo" onclick="openModal(this)">Diagrama de caso de uso</div>
+                <div class="task-card purple" id="task10" data-project="empreendedorismo" onclick="openModal(this)">Pitch</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Detalhes da Tarefa</h2>
+            <form id="task-form">
+                <label for="task-title">Título:</label>
+                <input type="text" id="task-title" name="task-title" readonly>
+    
+                <label for="task-project">Projeto:</label>
+                <select id="task-project" name="task-project">
+                    <option value="redes">Redes de computadores</option>
+                    <option value="empreendedorismo">Empreendedorismo</option>
+                    <option value="cliente">Prog. Cliente em Sis.</option>
+                    <option value="servidor">Prog. Servidor em Sis.</option>
+                    <option value="tecnico">Projeto técnico</option>
+                    <option value="topicos">Tópicos especiais</option>
+                </select>
+    
+                <label for="task-user">Atribuir a:</label>
+                <select id="task-user" name="task-user">
+                    <option value="blue">Usuário 1</option>
+                    <option value="pink">Usuário 2</option>
+                    <option value="green">Usuário 3</option>
+                    <option value="purple">Usuário 4</option>
+                </select>
+    
+                <label for="task-description">Descrição:</label>
+                <textarea id="task-description" name="task-description"></textarea>
+    
+                <label for="start-date">Data de Início:</label>
+                <input type="date" id="start-date" name="start-date">
+    
+                <label for="end-date">Data de Término:</label>
+                <input type="date" id="end-date" name="end-date">
+    
+                <button type="button" onclick="saveTaskDetails()">Salvar</button>
+            </form>
+        </div>
+    </div>    
+    
+
+    <script src="/JS/PagPrincipal.js"></script>
+    <script src="/JS/LocalStorage.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="/CSS/perfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container container-1">
+            <div class="profile-pic">
+                <img src="/IMG/perfil-de-usuario.png" alt="Foto de Perfil">
+            </div>
+            <h3>Vitor Martins Carpes</h3>
+            <br>
+            <p>Palhoça - SC, Brasil</p>
+            <p>vitor.carpes@aluno.fmpsc.edu.br</p>
+            <div class="logout-icon">
+                <a href="login.html">
+                    <img src="/IMG/sair-do-usuario.png" alt="Ícone de Logout">
+                </a>
+            </div>
+        </div>
+        
+        <div class="details-container container-2">
+            <h1>Meu perfil</h1>
+            <p>Visualize e edite suas informações pessoais abaixo.</p>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" value="Vitor">
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" value="Martins Carpes">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" value="Palhoça - SC, Brasil">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email de login</label>
+                    <input type="email" id="email" value="vitor.carpes@aluno.fmpsc.edu.br">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="********">
+                </div>
+                <a href="/HTML/RedefSenha.html"  class="reset-button">Redefinir senha</a>
+            </form>
+        </div>
+    </div>
+
+    <div id="back-button-container" class="back-button-container">
+        <a href="/HTML/PagPrincipal.html">
+            Voltar
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.reset-password-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+}
+
+.reset-password-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reset-password-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-button {
+    width: 40%;
+    background-color: #888;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button {
+    background-color: transparent;
+    color: #888;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button-container {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 30px; /* Distância do rodapé */
+    left: 38px; /* Distância da esquerda */
+    z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
+}
+
+.back-button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

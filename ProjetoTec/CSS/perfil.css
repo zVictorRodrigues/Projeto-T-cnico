@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #4e4f50;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contêiner 1 como pilar na esquerda */
+.container-1 {
+    width: 25%; /* Ajuste a largura conforme necessário */
+    height: 560px; /* Altura ajustável conforme o conteúdo */
+    background-color: #eceeef;
+    position: fixed; /* Posicionamento fixo para se comportar como uma sidebar */
+    top: 58px; /* Distância do topo */
+    left: 35px; /* Distância da esquerda */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionado para elevar o contêiner */
+
+}
+
+/* Contêiner 2 como retângulo no meio, quase encostando no contêiner 1 */
+.container-2 {
+    width: 60%; /* Ajuste a largura conforme necessário */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+    background-color: #eceeef;
+    position: relative; /* Posicionamento relativo para alinhamento flex */
+    top: 40px; /* Distância do topo */
+    left: calc(28% + 33px); /* Posicionado à direita do contêiner 1 */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionado para elevar o contêiner */
+}
+
+.elevated-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-container h3, .profile-container p {
+    margin: 10px 0;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    }
+
+    .profile-pic {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+.details-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-container .form-group {
+    margin-bottom: 20px;
+}
+
+.details-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.details-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reset-button {
+    background-color: #888;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+.back-button-container {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 30px; /* Distância do rodapé */
+    left: 38px; /* Distância da esquerda */
+    z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
+}
+
+.back-button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-icon {
+    margin-top: 260px; /* Ajuste conforme necessário */
+}
+
+.logout-icon a {
+    display: inline-block;
+    width: 30px; /* Largura do ícone */
+    height: 30px; /* Altura do ícone */
+    cursor: pointer;
+}
+
+.logout-icon img {
+    width: 100%; /* Para ocupar todo o espaço do container */
+    height: auto; /* Para manter a proporção original */
+}

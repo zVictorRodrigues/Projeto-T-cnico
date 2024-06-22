@@ -1,0 +1,224 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4e4f50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: 100vh; 
+}
+
+.sidebar-header h2 {
+    margin: 0 0 20px;
+}
+
+.project-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.project-list li.active {
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.board-header h1 {
+    margin: 0;
+}
+
+.board-header input {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.board-filters {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; 
+}
+
+.board-filters .filter {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: -5px; 
+    z-index: 1; 
+}
+
+.board-filters .filter:not(:last-child) {
+    margin-right: -5px; 
+}
+
+.board-filters .blue { background-color: #007bff; }
+.board-filters .pink { background-color: #e83e8c; }
+.board-filters .green { background-color: #28a745; }
+.board-filters .purple { background-color: #6f42c1; }
+
+.board {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    background-color: #868282;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.column h2 {
+    margin: 0 0 10px;
+}
+
+.task-card {
+    background-color: #4e4f50;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.task-card.red { border-left: 5px solid red; }
+.task-card.blue { border-left: 5px solid blue; }
+.task-card.grey { border-left: 5px solid grey; }
+.task-card.purple { border-left: 5px solid purple; }
+
+.add-task {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.modal-content {
+    background-color: #4e4f50;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea, form select, form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.color-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.color-selector .filter {
+    cursor: pointer;
+    border: 2px solid transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.color-selector .filter.selected {
+    border: 2px solid white;
+}
+
+
+.profile-icon-container {
+    position: fixed; /* Fixa o ícone na tela */
+    top: 35px; /* Distância do topo */
+    right: 800px; /* Distância da direita */
+    z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
+}
+
+.profile-icon-container img {
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    border-radius: 50%; /* Transforma em círculo (se for o caso) */
+    cursor: pointer; /* Mostra que é clicável */
+}
+
